@@ -1,0 +1,92 @@
+{
+  "files.autoSave": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[javascript,javascriptreact, typescript, typescriptreact, json,jsonc, graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[postcss,scss,css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.formatOnSave": true
+  },
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "conventionalCommits.scopes": [
+    "app",
+    "api",
+    "web",
+    "ui",
+    "icons",
+    "experience",
+    "infra",
+    "config",
+    "release",
+    "deps"
+  ],
+  "cSpell.words": [
+    "callout",
+    "clsx",
+    "commitlint",
+    "Consolas",
+    "conventionalcommits",
+    "Cretu",
+    "demi",
+    "Embla",
+    "extralight",
+    "googleusercontent",
+    "IIFE",
+    "indend",
+    "johnsilver",
+    "linebreak",
+    "Mantine",
+    "Menlo",
+    "middlewares",
+    "mikro",
+    "myshopify",
+    "nestjs",
+    "nesw",
+    "Neue",
+    "nextjs",
+    "Noto",
+    "Parens",
+    "persistor",
+    "picsum",
+    "precommit",
+    "reactjs",
+    "reduxjs",
+    "Renderable",
+    "Roboto",
+    "Segoe",
+    "sendgrid",
+    "shpat",
+    "signin",
+    "signout",
+    "signup",
+    "somesecret",
+    "stylelint",
+    "tailwindcss",
+    "tanstack",
+    "Todos",
+    "tsdx",
+    "tseslint",
+    "tsup",
+    "turborepo",
+    "typecheck",
+    "virtuals",
+    "Wordmark",
+    "zustand"
+  ]
+}
