@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
+import { Permission } from 'src/permissions/permission.model';
 import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
 import { Group } from './group.model';
@@ -13,11 +14,25 @@ export class GroupsService {
   }
 
   async findAll() {
-    return this.groupModel.findAll({ include: ['permissions'] });
+    return this.groupModel.findAll({
+      include: [
+        {
+          model: Permission,
+          as: 'permissions',
+        },
+      ],
+    });
   }
 
   async findOne(id: number) {
-    return this.groupModel.findByPk(id, { include: ['permissions'] });
+    return this.groupModel.findByPk(id, {
+      include: [
+        {
+          model: Permission,
+          as: 'permissions',
+        },
+      ],
+    });
   }
 
   async update(id: number, updateGroupDto: UpdateGroupDto) {

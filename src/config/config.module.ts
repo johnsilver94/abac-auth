@@ -7,11 +7,12 @@ import * as Joi from 'joi';
     ConfigModuleNest.forRoot({
       isGlobal: false,
       validationSchema: Joi.object({
-        DB_HOST: Joi.string().required(),
-        DB_PORT: Joi.number().required(),
-        DB_USER: Joi.string().required(),
-        DB_PASS: Joi.string().required(),
-        DB_NAME: Joi.string().required(),
+        PORT: Joi.number().required().default(3000),
+        DB_HOST: Joi.string().required().default('localhost'),
+        DB_PORT: Joi.number().required().default(5432),
+        DB_USER: Joi.string().required().default('postgres'),
+        DB_PASS: Joi.string().required().default('postgres'),
+        DB_NAME: Joi.string().required().default('postgres'),
       }),
     }),
   ],

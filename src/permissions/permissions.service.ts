@@ -22,10 +22,10 @@ export class PermissionsService {
     return this.permissionModel.findByPk(id);
   }
 
-  async update(id: number, updatePermissionDto: UpdatePermissionDto) {
+  async update(id: number, { name }: UpdatePermissionDto) {
     const permission = await this.findOne(id);
     if (permission) {
-      return permission.update({ ...updatePermissionDto });
+      return permission.update({ name });
     }
   }
 
