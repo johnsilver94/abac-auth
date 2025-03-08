@@ -16,7 +16,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
         database: configService.get<string>('DB_NAME'),
         // models: [User, Group, UserGroup, Permission, GroupPermission],
         autoLoadModels: true,
-        synchronize: true,
+        synchronize: false,
       }),
     }),
   ],
